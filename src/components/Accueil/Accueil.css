@@ -1,0 +1,88 @@
+.jumpbotron{
+    background-image:url('../../assets/Media/plates-header.jpg');
+    height: max-content;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.jumpbotron__content{
+
+    margin: 0 auto;
+    background-color: #393935;
+    padding: 7em 2em 7em 2em;
+    width: 50%;
+    border-left: .5em solid white;
+    border-right: .5em solid white;
+    text-align: center;
+}
+
+.jumpbotron p {
+    margin-top: 1em;
+}
+
+
+/*--------------------------------Product--------------------------------*/
+.product article span{
+
+    
+    padding: .5em 0 0 0;
+}
+.product article p {
+
+    text-transform: uppercase;
+    padding: .5em 0 0 0;
+
+}
+
+.product article .--overlay{
+    text-align: center;
+    position: absolute;
+    width: 9em;
+    text-transform: uppercase;
+    margin: 5em 0 6em 5em;
+    padding: .6em;
+    background-color: #1d1d20;
+    color:#fff;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity .35s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.product article .--overlay:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.product article .--overlay:hover img{
+    opacity: 0.5;
+}
+
+.product article .--overlay:nth-child(2){
+    margin: 9.2em 0 6em 5em;
+    background-color: #4a4a4d;
+}
+.product article{
+    width: 20em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.product article img{
+    width: 20em;
+    height: 15em;
+    object-fit: cover;
+    transition: opacity .35s ease-in-out;
+}
+.product{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 4em ;
+    width: max-content;
+    margin: 5em auto;
+    
+}
+
