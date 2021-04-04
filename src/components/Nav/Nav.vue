@@ -1,6 +1,9 @@
 <template>
     <div>
         <nav>
+            <div v-on:click="showMenu" id="menu-mobile" :class="{active:show}" >
+                <span ></span>
+            </div>
             <div>
                 <router-link to="/">
 
@@ -8,14 +11,17 @@
                 </router-link>
 
             </div>
-            <ul>
+            <ul :class="{isActive:show}">
                 <li> <router-link to="/">Home</router-link></li>
                 <li><router-link to="/">shop<span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></router-link> </li>
                 <li><router-link to="/">journal</router-link> </li>
                 <li><router-link to="/">more <span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></router-link></li>
             </ul>
-            
-            <p v-on:click="showPopup">my cart(2)<span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></p>
+            <div v-on:click="showPopup" id="nav__cart--mobile">
+                <img src="../../assets/Icones/shopping-bag-solid.svg" alt="icone cadenat">
+                (2)
+            </div>
+            <p :click="showPopup">my cart(2)<span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></p>
                 
         </nav>
 
@@ -54,13 +60,18 @@
             return{
 
                 active:false,
+                show:false,
             }
         },
         methods:{
             showPopup(){
-                this.active = !this.active;
-            }
-        }
+                this.active = !this.active
+            },
+            showMenu(){
+                
+                this.show = !this.show
+            },
+        },
     }
 
 </script>

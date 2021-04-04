@@ -104,3 +104,20 @@ hr{
     background-color: #1d1d20;
     text-transform: uppercase;
 }
+@media screen and (max-width:450px){
+   
+    .shopping{
+        flex-direction: column;
+        padding: 0;
+    }
+    .shopping img{
+        padding: 2em 0;
+    }
+    .shopping_text{
+        padding: 2em 0 1em 0;
+    }
+    .shopping_text p {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+}

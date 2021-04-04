@@ -5,7 +5,7 @@
                 <h2>Plates</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis nobis iusto error deserunt eos 
                     est aliquid harum at assumenda quod nostrum nisi cupiditate labore sit in iure voluptatibus impedit, 
-                    dignissimos hic commodi? Laborum quibusdam repudiandae molestiae distinctio! Libero 
+                    dignissimos hic commodi? 
                 </p>
             </div>
         </section>
@@ -34,14 +34,9 @@ export default{
         return{
 
             allProduct:product,
-            show:false,
+            
         }
     },
-
-    mounted(){
-        
-        console.log(this.allProduct);
-    }
 }
 
 </script>

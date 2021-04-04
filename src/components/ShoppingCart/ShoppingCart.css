@@ -28,7 +28,10 @@ span{
     margin: 0 auto;
     padding: 5em 3em 1em 3em;
 }
-
+.shopping__cart article{
+    border-bottom: 2px solid #dadada;
+    
+}
 .category{
     display: flex;
     justify-content: space-between;
@@ -49,6 +52,7 @@ span{
 .product img{
     width: 20%;
     padding: 0 1em 0 0;
+    object-fit: cover; 
 }
 .product__text p:last-child{
     text-transform: uppercase;
@@ -73,6 +77,8 @@ span{
     cursor: pointer;
     
 }
+
+/*--------------------------------Content product---------------------------------------------*/
 .shopping_quantity{
     display: flex;
     align-items: center;
@@ -119,8 +125,10 @@ span{
 .exit{
     padding: 0 .0 0 3em;
 }
-
-
+.shopping__control--mobile,.product__price--mobile{
+    display: flex;
+}
+/*------------------------------------------Resume price cart-------------------------------------*/
 .shopping__resume--position{
     display: flex;
     justify-content: flex-end;
@@ -136,12 +144,13 @@ span{
 
 .shopping__total span:first-child,.shopping__subtotal span:first-child{
     padding: 0 20em 0 0;
-
+    
 }
 .shopping__subtotal{
     padding: 1em 0 1em 0;
 }
 
+/*-----------------------------Button checkout and continue shopping------------------------*/
 .shopping__checkout{
     display: flex;
     justify-content: space-between;
@@ -162,4 +171,74 @@ span{
     text-transform: uppercase;
     padding: 1.5em;
     cursor: pointer;
+}
+
+/*----------------------------------Responsive---------------------------------*/
+
+@media screen and (max-width:450px){
+
+    hr:first-of-type{
+        display: none;
+    }
+    h1{
+        padding: .5em 0;
+        font-size: 2em;
+    }
+    .category{
+        display: none;
+    }
+    /*--------------------------------Content product---------------------------------------------*/
+    .shopping__cart{
+        width: 80%;
+        padding: 0 1em;
+    }
+    .shopping__cart article{
+        display: flex;
+        flex-direction: column;
+    }
+    .product img{
+        width: 30%;
+    }
+    .product__text p{
+        font-size: 11px;
+    }
+    .shopping__control--mobile{
+        padding: 2em 0 0 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .product__price--mobile{
+        align-items: center;
+    }
+    .exit{
+        padding: 0 0 0 1em;
+    }
+/*------------------------------------------Resume price cart-------------------------------------*/
+    .shopping__resume--position{
+        justify-content: center;
+    }
+    .shopping__resume{
+        width: 100%;
+    }
+    .shopping__total,.shopping__subtotal{
+
+        justify-content: space-between;
+    }
+    .shopping__total span:first-child, .shopping__subtotal span:first-child{
+        padding: 0 0 0 0;
+    }
+
+    /*-----------------------------Button checkout and continue shopping------------------------*/
+    .shopping__checkout{
+        flex-direction: column;
+        
+        text-align: center;
+    }
+    .shopping__checkout a{
+        margin: 0 0 1em 0;
+    }
+    .shopping__checkout button{
+        width: max-content;
+        margin: 0 auto;
+    }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <Headertop></Headertop>
    <router-view></router-view>
   </div>
 </template>
@@ -17,27 +17,27 @@ export default {
     }
   },
   components:{
-    Header,
+    "Headertop":Header,
   }
 }
 </script>
 
 <style>
   body{
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-    font-family: 'Signika', sans-serif;
-    font-weight: 300;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
 }
 
 p,h2{
-    margin-block-start: 0;
-    margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 
 }
 h2{
-    font-size: 2em;
+  font-size: 2em;
 }
 a{
   font-family: 'Signika', sans-serif;

@@ -2,7 +2,7 @@
     <div class="bg">
         <h1>Shopping Cart</h1>
         <div class="shopping__cart">
-            <div class="category">
+            <div class="category" >
                 <span>Product</span>
                 <div class="category__other">
                     <span>Quantity</span>
@@ -10,7 +10,7 @@
                     <span>Action</span>
                 </div>
             </div>
-            <hr>
+                <hr>
             <article>
                 <div class="product">
                     <img src="../../assets/Media/hand-painted-blue-flat-dish.jpg" alt="">
@@ -20,23 +20,24 @@
                         <p><span>Color: </span>White</p>
                     </div>
                 </div>
-                <div class="shopping_control">
-                    <div class="shopping_quantity">
-                        <input type="text" value="">
-                        <div class="btn_group">
-
-                            <button>+</button>
-                            <button>-</button>   
-
+                <div class="shopping__control--mobile">
+                    <div class="shopping_control">
+                        <div class="shopping_quantity">
+                            <input type="text" value="">
+                            <div class="btn_group">
+                                <button>+</button>
+                                <button>-</button>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__price--mobile">
+                        <span class="product__price">$28.00</span>
+                        <div class="exit">
+                            <span>X</span>
                         </div>
                     </div>
                 </div>
-                <span class="product__price">$28.00</span>
-                <div class="exit">
-                    <span>X</span>
-                </div>
             </article>
-            <hr>
             <div class="shopping__resume--position">
                 <div class="shopping__resume">
 
@@ -55,22 +56,24 @@
             <div class="shopping__checkout">
                 <router-link to="/">Continue shopping</router-link>
                 <button>checkout ($56.00)</button>
-
-
             </div>
         </div>
 
     </div>
 </template>
 <script>
-
+    
+    
     export default{
         name:'ShoppingCart',
         data(){
             return{
+               
 
             }
         },
+       
+        
 
     }
 </script>
