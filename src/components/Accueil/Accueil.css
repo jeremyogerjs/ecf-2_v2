@@ -17,7 +17,13 @@
     border-right: .5em solid white;
     text-align: center;
 }
+.jumpbotron h2{
+    border-bottom: 1px solid #fff;
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: .5em;
 
+}
 .jumpbotron p {
     margin-top: 1em;
 }
@@ -26,14 +32,17 @@
 /*--------------------------------Product--------------------------------*/
 .product article span{
 
-    
+    opacity: 0.5;
     padding: .5em 0 0 0;
+}
+.product article span:first-child{
+    opacity: 1;
 }
 .product article p {
 
     text-transform: uppercase;
     padding: .5em 0 0 0;
-
+    font-weight: 500;
 }
 
 .product article .--overlay{
@@ -52,12 +61,15 @@
     text-decoration: none;
 }
 
-.product article .--overlay:hover{
+.product article:hover .--overlay{
     opacity: 1;
+    
+}
+.product article .--overlay:hover{
     transform: scale(1.5);
 }
 
-.product article .--overlay:hover img{
+.product article:hover img {
     opacity: 0.5;
 }
 

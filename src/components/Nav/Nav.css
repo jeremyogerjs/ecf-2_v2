@@ -5,6 +5,7 @@ nav{
     height: max-content;
     align-items: center;
     color: black;
+    font-weight: 500;
 }
 nav span img{
     width: .5em;
@@ -32,11 +33,13 @@ nav p:last-child{
     position: absolute;
     background-color: #fff;
     right: 0;  
-    width: max-content;
+    width: 19em;
     opacity: 0;
     transition: opacity .35s ease-in-out;
     text-transform: uppercase;
     line-height: 1.2em;
+    padding: 1em;
+    z-index: 20;
 
 }
 .cart_popup article span{
@@ -52,8 +55,11 @@ nav p:last-child{
 .cart_popup img{
     width: 5em;
     height: 5.5em;
-    padding: 1em;
+    padding: 0 1em 0 0;
     object-fit: cover;
+}
+.cart_popup p {
+    font-weight: 500;
 }
 .cart_popup article{
     display: flex;
@@ -62,19 +68,21 @@ nav p:last-child{
     padding-right: 3em;
 }
 .cart_popup hr{
-    margin: 1em;
+    margin: 1em 0;
+    border: .5px solid #dadada;
+    background-color: #dadada;
 }
     
 .exit{
     position: absolute;
     right: 1em;
-    top: 0;
+    top: 1.3em;
     cursor: pointer;
 }
 
 .exit img{
-    width: 15em;
-        height: 15em;
+    width: 9em;
+    height: 9em;
 }
 
 .cart_total{
@@ -83,32 +91,39 @@ nav p:last-child{
     opacity: 0.5;
 }
 
-.cart_total span{
-    padding: 0 1em 0 1em;
-}
+
 
 
 .cart_validation{
-    margin: 0 1em;
-    padding: 1em 0 1em 0;
+    
+    padding: 1em 0 0 0;
     font-size: 1em;
+    display: flex;
+    justify-content: space-between;
 }
-.cart_validation span a{
-
-    padding: 1em 3em 1em 3em;
+.cart_validation button a{ 
     text-decoration: none;
-    border: 1px solid #1d1d20;
-    background-color:#1d1d20;
-    color: #fff;
+    font-weight: 700;
+    
+}
+.cart_validation button{
     cursor: pointer;
+    background-color:#1d1d20;
+    border: 1px solid #1d1d20;
+    padding: 1em 3em 1em 3em;
+   
 }
-.cart_validation span:first-child{
-    margin-right: 1em;
+.cart_validation button:first-child{   
     background-color: #fff;
-    color: black;
-
+   
 }
 
+.cart_validation button:first-child a{
+    color: #1d1d20;
+}
+.cart_validation button:last-child a{
+    color: #fff;
+}
 .isActive{
     opacity: 1;
     

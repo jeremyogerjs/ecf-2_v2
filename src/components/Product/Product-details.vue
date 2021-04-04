@@ -28,7 +28,7 @@
 
                         </div>
                     </div>
-                    <p>ADD to Cart</p>
+                    <button class="add">ADD to Cart</button>
                 </div>
 
             </div>

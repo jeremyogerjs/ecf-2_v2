@@ -1,0 +1,165 @@
+.bg{
+    background-color: #f6f6f6;
+}
+hr{
+    border: .5px solid #dadada;
+    background-color: #dadada;
+}
+h1{
+    width: max-content;
+    margin: 0 auto;
+    padding: 2em 0 2em 0;
+    font-weight: 300;
+    font-size: 3em;
+}
+article{
+    display: flex;
+    padding: 2em 0  3em 0;
+}
+span{
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 500;
+}
+.shopping__cart{
+    background-color: white;
+    width: max-content;
+    margin: 0 auto;
+    padding: 5em 3em 1em 3em;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 1em 0;
+    align-items: baseline;
+    
+}
+
+.category__other span:nth-child(2){
+    padding: 0 2em;
+    
+}
+/*---------------------------------ARTICLE PRODUCT--------------------------------------*/
+.product{
+    display: flex;
+    
+}
+.product img{
+    width: 20%;
+    padding: 0 1em 0 0;
+}
+.product__text p:last-child{
+    text-transform: uppercase;
+    font-size: small;
+    padding: 1em 0 0 0;
+    font-weight: 300;
+}
+.product__text p{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.shopping_control{
+    display: flex;
+    width: max-content;  
+}
+.shopping_control p {
+    background-color: #1d1d20;
+    color: #fff;
+    padding: 1em;
+    margin: auto 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.shopping_quantity{
+    display: flex;
+    align-items: center;
+    height:max-content;   
+    
+}
+.shopping_quantity .btn_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100%;
+    
+    
+}
+.shopping_quantity .btn_group button:first-child{
+    margin-bottom: .3em;
+}
+.shopping_quantity .btn_group button{
+    
+    width: 1.5em;
+    margin: auto;
+    border: none;
+    background-color: #dadada;
+    cursor: pointer;
+}
+.shopping_quantity input{
+    width: 3em;
+    height: 3em;
+    background-color: #eeeeee;
+    border: none;
+    margin-right: .2em;
+    
+}
+
+.product__price{
+    padding: 0 0 0 2em;
+}
+
+.exit span{
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.exit{
+    padding: 0 .0 0 3em;
+}
+
+
+.shopping__resume--position{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 0 1em 0;
+}
+.shopping__resume{
+    justify-content: space-between;
+    
+}
+.shopping__total,.shopping__subtotal{
+    display: flex;
+}
+
+.shopping__total span:first-child,.shopping__subtotal span:first-child{
+    padding: 0 20em 0 0;
+
+}
+.shopping__subtotal{
+    padding: 1em 0 1em 0;
+}
+
+.shopping__checkout{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0 0 0;
+
+}
+.shopping__checkout a{
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #1d1d20;
+    height: max-content;
+    color: #1d1d20;
+}
+.shopping__checkout button{
+    border: none;
+    color: #fff;
+    background-color: #1d1d20;
+    text-transform: uppercase;
+    padding: 1.5em;
+    cursor: pointer;
+}

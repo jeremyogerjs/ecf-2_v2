@@ -28,6 +28,7 @@ export default {
     margin:0;
     padding: 0;
     font-family: 'Signika', sans-serif;
+    font-weight: 300;
 }
 
 p,h2{
@@ -37,6 +38,9 @@ p,h2{
 }
 h2{
     font-size: 2em;
+}
+a{
+  font-family: 'Signika', sans-serif;
 }
 
 </style>

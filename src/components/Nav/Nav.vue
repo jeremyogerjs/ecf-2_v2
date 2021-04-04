@@ -2,9 +2,9 @@
     <div>
         <nav>
             <div>
-                <router-link>
+                <router-link to="/">
 
-                    <img src="../../assets/Media/logo.png" alt="">
+                    <img src="../../assets/Media/logo.png" alt="Hero logo de l'entreprise">
                 </router-link>
 
             </div>
@@ -21,7 +21,7 @@
 
         <section class="cart_popup" :class="{isActive:active}">
                 <div>
-                    <img src="../../assets/Media/hand-painted-blue-flat-dish.jpg" alt="">
+                    <img src="../../assets/Media/hand-painted-blue-flat-dish.jpg" alt="hand-painted-blue-flat-dish">
                     <article>
 
                         <span v-on:click="showPopup" class="exit"><img src="../../assets/Icones/times-solid.svg" alt="croix"></span>
@@ -40,8 +40,8 @@
                 
                 <div class="cart_validation">
                     
-                    <span><router-link to="#">CART</router-link> </span>
-                    <span><router-link to="/ShoppingCart">CHECKOUT</router-link></span>
+                    <button><router-link to="/">VIEW CART</router-link> </button>
+                    <button><router-link to="/ShoppingCart">CHECKOUT</router-link></button>
                 </div>
             </section>
     </div>

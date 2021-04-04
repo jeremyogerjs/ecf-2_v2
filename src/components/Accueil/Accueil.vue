@@ -14,8 +14,7 @@
             <article :key="index" v-for="(product,index) in allProduct">
                 <router-link class="--overlay" to="/Product"><span > View details</span></router-link>
                 <span class="--overlay"> add to cart </span>
-                <img :src="'../../assets/Media/'+`${product.image}`" :alt="product.title">
-                
+                <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <span>{{ product.brand }}</span>
                 <p>{{ product.title }}</p>
                 <span>{{"$" + product.price + ".00"}} </span>
@@ -35,7 +34,6 @@ export default{
         return{
 
             allProduct:product,
-            srcImg:"",
             show:false,
         }
     },
