@@ -2,33 +2,31 @@
     <div>
         <hr>
         <div class="breadcrumb">
-            <p>Home / PLATES / HAND PAINTED BLUE FLAT DISH</p>
+            <p>Home / PLATES / <span> {{ allProduct[this.Id-1].title }} </span> </p>
         </div>
         <div class="shopping">
 
-            <img src="../../assets/Media/hand-painted-blue-flat-dish.jpg" alt="">
+            <img :src="require('../../assets/Media/'+`${allProduct[this.Id-1].image}`)" :alt="allProduct[this.Id-1].title">
             <div class="shopping_content">
                 <div class="shopping_text">
                     
-                    <span>Kiriko</span>
-                    <p>HAND PAINTED BLUE FLAT DISH</p>
-                    <span>$28.00</span>
-                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex voluptatibus explicabo, autem voluptatem qui deleniti eos maiores atque sequi tempore assumenda blanditiis, necessitatibus a incidunt quis earum dolore commodi. Ex?
-
-                    </span>
+                    <span>{{ allProduct[this.Id-1].brand }}</span>
+                    <p>{{ allProduct[this.Id-1].title }}</p>
+                    <span>{{"$"+ allProduct[this.Id-1].price + ".00" }}</span>
+                    <span> {{ allProduct[this.Id-1].description }}</span>
                 </div>
                 <hr>
                 <div class="shopping_control">
                     <div class="shopping_quantity">
-                        <input type="text" value="">
+                        <input type="text" v-model="quantity" value="quantity">
                         <div class="btn_group">
 
-                            <button>+</button>
-                            <button>-</button>   
+                            <button :id="this.Id-1" @click="addQty">+</button>
+                            <button :id="this.Id-1" @click="subQty">-</button>   
 
                         </div>
                     </div>
-                    <button class="add">ADD to Cart</button>
+                    <button @click="addToCart" class="add">ADD to Cart</button>
                 </div>
 
             </div>
@@ -39,13 +37,48 @@
 </template>
 
 <script>
+import product from '../../product.json';
+import Store from '../../store/store';
     export default{
         name:"Product-details",
+        store:Store,
         data(){
             return{
 
+                allProduct:product,
+                Id:this.$route.params.id, 
+                quantity:1,
             }
         },
+        methods:{
+            addToCart(){
+                let id = Number(this.Id-1)
+                
+                //Verify if product has already exist in cart and if true so add jsut quantity
+                if(this.$store.state.myCart.find( element => element == this.allProduct[id])){
+                    this.allProduct[id].quantity +=this.quantity;
+                }
+                else{
+                    this.$store.state.myCart.push(this.allProduct[id]);
+                    this.allProduct[id].quantity = this.quantity;                      //add new properties for each element add in cart
+                }
+                this.$store.commit ('calcAddTot',this.allProduct[id]);  //Change data for total but doesn't working probleme when add specify quantity.
+            },
+             addQty(){
+                
+                this.quantity++
+                
+            },
+            subQty(){ 
+                
+                if(this.quantity ==0){
+                    this.quantity ==0;
+                }else{
+                    this.quantity--;
+                }   
+            }
+             
+        }
     }
 
 

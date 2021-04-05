@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav>
-            <div v-on:click="showMenu" id="menu-mobile" :class="{active:show}" >
+            <div @click="showMenu" id="menu-mobile" :class="{active:show}" >
                 <span ></span>
             </div>
             <div>
@@ -17,61 +17,83 @@
                 <li><router-link to="/">journal</router-link> </li>
                 <li><router-link to="/">more <span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></router-link></li>
             </ul>
-            <div v-on:click="showPopup" id="nav__cart--mobile">
+            <div @click="showPopup" id="nav__cart--mobile">
                 <img src="../../assets/Icones/shopping-bag-solid.svg" alt="icone cadenat">
                 (2)
             </div>
-            <p :click="showPopup">my cart(2)<span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></p>
+            <p @click="showPopup">my cart {{ "(" + cartPopup.length +")" }} <span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span></p>
                 
         </nav>
 
-        <section class="cart_popup" :class="{isActive:active}">
+        <section class="cart_popup" :class="{isActive:active}" >
+            <article :key="index" v-for="(product,index) in cartPopup">
+                
+                <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <div>
-                    <img src="../../assets/Media/hand-painted-blue-flat-dish.jpg" alt="hand-painted-blue-flat-dish">
-                    <article>
 
-                        <span v-on:click="showPopup" class="exit"><img src="../../assets/Icones/times-solid.svg" alt="croix"></span>
-                        <p>HAND PAINTED BLUE FLAT DISH</p>
-                        <p> <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span> 1</p>
-                        <span>KIRIKO</span>
-                        <p>$28.00</p>
-
-                    </article>
+                    <span @click="removeCart" :id="index"  class="exit"><img :id="index" src="../../assets/Icones/times-solid.svg" alt="croix"></span>
+                    <p> {{ product.title }} </p>
+                    <p> <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span> {{ product.quantity }} </p>
+                    <span> {{ product.brand }} </span>
+                    <p> {{ "$" + product.price + ".00" }} </p>
                 </div>
-                <hr>
+              
+                
+            </article>
+            <span v-if="empty"> {{ emptyCart }} </span>
+            <hr>
                 <div class="cart_total">
                     <span >TOTAL </span>
-                    <span>$56.00</span>
+                    <span> {{"$" + calcTot + ".00" }} </span>
                 </div>
                 
                 <div class="cart_validation">
                     
                     <button><router-link to="/">VIEW CART</router-link> </button>
-                    <button><router-link to="/ShoppingCart">CHECKOUT</router-link></button>
+                    <button @click="showPopup" ><router-link to="/ShoppingCart">CHECKOUT</router-link></button>
                 </div>
-            </section>
+        </section>
     </div>
 </template>
 
 <script>
+import Store from '../../store/store'
     export default{
         name:'Nav',
+        store: Store,
         data(){
             return{
 
                 active:false,
                 show:false,
+                empty:false,                        //Conditional render doesn't working.
+                cartPopup:this.$store.state.myCart,
             }
         },
         methods:{
             showPopup(){
-                this.active = !this.active
+                this.active = !this.active;  
             },
             showMenu(){
                 
-                this.show = !this.show
+                this.show = !this.show;
             },
+            removeCart(e){
+               
+                this.$store.commit('removetoCart',e);
+            }
+            
+            
         },
+        computed:{
+            calcTot(){
+                return this.$store.state.total;
+            },
+            emptyCart(){
+                this.$store.commit('emptyCart');    //doesn't working
+                return this.empty == true;
+                }
+            },
     }
 
 </script>

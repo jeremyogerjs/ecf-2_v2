@@ -5,6 +5,6 @@ import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 export default [
     {path:'/', component:Accueil},
-    {path: "/Product",component: Product},
+    {path: "/Product/:id",component: Product},
     {path:"/ShoppingCart",component: ShoppingCart},
 ]

@@ -7,6 +7,9 @@ input[type="text"]{
     margin: 0 auto;
     padding: 1em 0 1em 0;
 }
+.breadcrumb span{
+    opacity: 0.5;
+}
 hr{
     border: .5px solid #dadada;
     background-color: #dadada;
@@ -24,7 +27,9 @@ hr{
 }
 
 .shopping img{
-    width: 100%;
+    
+    width: -webkit-fill-available;
+    
 }
 
 .shopping_text{

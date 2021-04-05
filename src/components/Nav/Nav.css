@@ -111,9 +111,7 @@ nav p:last-child{
 .cart_popup span img{
     font-size: .1em;
 }
-.cart_popup div{
-    display: flex;    
-}
+
 .cart_popup img{
     width: 5em;
     height: 5.5em;
@@ -125,9 +123,9 @@ nav p:last-child{
 }
 .cart_popup article{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-right: 3em;
+    padding: 0 0 1.5em 0;
+    position: relative;
+    
 }
 .cart_popup hr{
     margin: 1em 0;
@@ -136,8 +134,8 @@ nav p:last-child{
 }    
 .exit{
     position: absolute;
-    right: 1em;
-    top: 1.3em;
+    right: .5em;
+    top: 0;
     cursor: pointer;
 }
 .exit img{

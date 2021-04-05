@@ -47,6 +47,7 @@ span{
 /*---------------------------------ARTICLE PRODUCT--------------------------------------*/
 .product{
     display: flex;
+    width: -webkit-fill-available;
     
 }
 .product img{
