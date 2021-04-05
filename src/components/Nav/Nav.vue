@@ -40,7 +40,7 @@
               
                 
             </article>
-            <span v-if="empty"> {{ emptyCart }} </span>
+            <span v-if="empty" id="empty"> {{ this.message }} </span>
             <hr>
                 <div class="cart_total">
                     <span >TOTAL </span>
@@ -66,13 +66,15 @@ import Store from '../../store/store'
 
                 active:false,
                 show:false,
-                empty:false,                        //Conditional render doesn't working.
+                empty:this.$store.state.empty,                        //Conditional render doesn't working.
                 cartPopup:this.$store.state.myCart,
+                message:'Your cart is empty !',
             }
         },
         methods:{
             showPopup(){
-                this.active = !this.active;  
+                this.active = !this.active;
+                this.emptyCart();  
             },
             showMenu(){
                 
@@ -81,19 +83,27 @@ import Store from '../../store/store'
             removeCart(e){
                
                 this.$store.commit('removetoCart',e);
+                this.emptyCart();
+            },
+        
+             emptyCart(){
+                 if(this.$store.state.myCart.length ==0){
+
+                     console.log(this.$store.state.myCart.length)
+                     this.empty =true;
+                 }else{
+                     console.log('Je suis pas vide !')
+                      this.empty =false;
+                 }
             }
+            },
             
-            
-        },
+        
         computed:{
             calcTot(){
                 return this.$store.state.total;
             },
-            emptyCart(){
-                this.$store.commit('emptyCart');    //doesn't working
-                return this.empty == true;
-                }
-            },
+        },   
     }
 
 </script>

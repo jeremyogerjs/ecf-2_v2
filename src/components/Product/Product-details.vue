@@ -52,22 +52,22 @@ import Store from '../../store/store';
         },
         methods:{
             addToCart(){
-                let id = Number(this.Id-1)
-                
+                let id = Number(this.Id-1);
                 //Verify if product has already exist in cart and if true so add jsut quantity
                 if(this.$store.state.myCart.find( element => element == this.allProduct[id])){
                     this.allProduct[id].quantity +=this.quantity;
+                    this.$store.state.total += this.allProduct[id].price * this.quantity;
                 }
                 else{
                     this.$store.state.myCart.push(this.allProduct[id]);
-                    this.allProduct[id].quantity = this.quantity;                      //add new properties for each element add in cart
+                    this.allProduct[id].quantity = this.quantity; //add new properties for each element add in cart
+                    this.$store.state.total += this.allProduct[id].price * this.quantity;
+                                         
                 }
-                this.$store.commit ('calcAddTot',this.allProduct[id]);  //Change data for total but doesn't working probleme when add specify quantity.
+                
             },
              addQty(){
-                
-                this.quantity++
-                
+                this.quantity++;
             },
             subQty(){ 
                 

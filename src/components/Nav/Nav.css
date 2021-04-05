@@ -104,6 +104,12 @@ nav p:last-child{
     pointer-events: none;
 
 }
+.cart_popup #empty{
+    opacity: 0.5;
+    font-size: .7em;
+    width: max-content;
+    margin: 0 auto;
+}
 .cart_popup article span{
     opacity: 0.5;
     font-size: .7em;
