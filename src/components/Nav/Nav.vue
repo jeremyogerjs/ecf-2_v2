@@ -30,8 +30,9 @@
                 
                 <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <div>
-
-                    <span @click="removeCart" :id="index"  class="exit"><img :id="index" src="../../assets/Icones/times-solid.svg" alt="croix"></span>
+                    <div class="exit">
+                        <span @click="removeCart" :id="index" ></span>
+                    </div>
                     <p> {{ product.title }} </p>
                     <p> <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span> {{ product.quantity }} </p>
                     <span> {{ product.brand }} </span>
@@ -89,11 +90,11 @@ import Store from '../../store/store'
              emptyCart(){
                  if(this.$store.state.myCart.length ==0){
 
-                     console.log(this.$store.state.myCart.length)
-                     this.empty =true;
+                    console.log(this.$store.state.myCart.length)
+                    this.empty = true;
                  }else{
-                     console.log('Je suis pas vide !')
-                      this.empty =false;
+                     
+                    this.empty =false;
                  }
             }
             },

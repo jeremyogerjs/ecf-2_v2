@@ -22,6 +22,14 @@ span{
     font-size: small;
     font-weight: 500;
 }
+.exit{
+    right: 9px;
+}
+.exit span{
+    top: 30px;
+    width: 35px;
+}
+
 .shopping__cart{
     background-color: white;
     width: max-content;
@@ -30,6 +38,7 @@ span{
 }
 .shopping__cart article{
     border-bottom: 2px solid #dadada;
+    position: relative;
     
 }
 .category{
@@ -41,7 +50,7 @@ span{
 }
 
 .category__other span:nth-child(2){
-    padding: 0 2em;
+    padding: 0 4em;
     
 }
 /*---------------------------------ARTICLE PRODUCT--------------------------------------*/
@@ -67,7 +76,8 @@ span{
 }
 .shopping_control{
     display: flex;
-    width: max-content;  
+    width: max-content;
+    margin-right: 20px;  
 }
 .shopping_control p {
     background-color: #1d1d20;
@@ -118,17 +128,18 @@ span{
     padding: 0 0 0 2em;
 }
 
-.exit span{
-    font-size: xx-large;
-    cursor: pointer;
-}
 
-.exit{
-    padding: 0 .0 0 3em;
-}
+
+
 .shopping__control--mobile,.product__price--mobile{
     display: flex;
+    
 }
+
+.product__price--mobile{
+    margin-right:95px;
+}
+
 /*------------------------------------------Resume price cart-------------------------------------*/
 .shopping__resume--position{
     display: flex;
@@ -213,7 +224,10 @@ span{
     }
     .exit{
         padding: 0 0 0 1em;
+        top: unset;
+        bottom: 55px;
     }
+    
 /*------------------------------------------Resume price cart-------------------------------------*/
     .shopping__resume--position{
         justify-content: center;

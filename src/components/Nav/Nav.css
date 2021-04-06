@@ -133,21 +133,13 @@ nav p:last-child{
     position: relative;
     
 }
+
 .cart_popup hr{
     margin: 1em 0;
     border: .5px solid #dadada;
     background-color: #dadada;
 }    
-.exit{
-    position: absolute;
-    right: .5em;
-    top: 0;
-    cursor: pointer;
-}
-.exit img{
-    width: 9em;
-    height: 9em;
-}
+
 .cart_total{
     display: flex;
     justify-content: space-between;
@@ -214,5 +206,8 @@ nav p:last-child{
         width: 1em;
         display: flex;
         padding-right: 25px;
+    }
+    .exit{
+        right: 0;
     }
 }

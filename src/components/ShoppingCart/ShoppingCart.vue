@@ -35,7 +35,7 @@
                             <div class="product__price--mobile">
                                 <span class="product__price">{{ "$"+ product.price + ".00" }}</span>
                                 <div :id="index" class="exit" @click="removeCart">
-                                    <span :id="index">X</span>
+                                    <span :id="index"></span>
                                 </div>
                             </div>
                         </div>
