@@ -1,9 +1,10 @@
 # ecf-2_v2
 Ce projet est un projet de cours aka ECF pour la formation continue dev/webMobile .
-Il a pour but de valider les acquis sur le HTML & CSS.
+
 J'ai réalisé ce projet en HTML,CSS et vueJS.
 
 Chaque composant a son fichier css.
+Le fichier App.vue intègre le css sur certain éléments commun du projet.
 ## Project setup vue2.x.x  
 ```
 npm install

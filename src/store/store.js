@@ -6,12 +6,11 @@ export default new Vuex.Store({
     state:{
         myCart:[],
         total:0,
-        empty:false,
+        empty:true,
     },
     mutations:{
         removetoCart(state,e){
             let id = Number(e.target.id);
-            console.log(state.myCart[id].quantity);
             state.total -= (state.myCart[id].price*state.myCart[id].quantity);
             state.myCart[id].quantity = 0;
             state.myCart.splice(id,1);
@@ -30,10 +29,19 @@ export default new Vuex.Store({
             let id = Number(e.target.id);
             state.myCart[id].quantity--;
         },
+        emptyCart(state){
+            if(state.myCart.length === 0){
+                
+                state.empty = true;
+            }else{   
+                state.empty =false;
+            }  
+        }
     },
     actions:{
-        
-
+        emptyCart(context){
+            context.commit('emptyCart');
+        }
     },
     getters:{
        

@@ -44,12 +44,13 @@ export default{
             if(this.$store.state.myCart.find( element => element == this.allProduct[e.target.id])){
                 
                 this.allProduct[e.target.id].quantity ++;
+                
             }
-            else{
-                this.$store.state.myCart.push(this.allProduct[e.target.id]);
+            else{this.$store.state.myCart.push(this.allProduct[e.target.id]);
                 this.allProduct[e.target.id].quantity = 1; //add new properties for each element add in cart                        
             }
             this.$store.commit ('calcAddTot',this.allProduct[e.target.id]);  //add price in state.total   
+            this.$store.dispatch('emptyCart');
         },
     }
 }

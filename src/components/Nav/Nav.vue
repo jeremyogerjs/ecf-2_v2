@@ -41,7 +41,7 @@
               
                 
             </article>
-            <span v-if="empty" id="empty"> {{ this.message }} </span>
+            <span v-if="this.$store.state.empty" id="empty"> {{ this.message }} </span>
             <hr>
                 <div class="cart_total">
                     <span >TOTAL </span>
@@ -65,8 +65,7 @@ import Store from '../../store/store'
         data(){
             return{
                 active:false,
-                show:false,
-                empty:this.$store.state.empty,                               //Conditional render doesn't working.
+                show:false,                              
                 cartPopup:this.$store.state.myCart,
                 message:'Your cart is empty !',
             }
@@ -74,7 +73,8 @@ import Store from '../../store/store'
         methods:{
             showPopup(){
                 this.active = !this.active;
-                this.emptyCart();  
+                this.emptyCart();
+                console.log(this.empty);
             },
             showMenu(){
                 
@@ -86,17 +86,14 @@ import Store from '../../store/store'
                 this.emptyCart();
             },
             emptyCart(){
-                if(this.$store.state.myCart.length ==0){
-                    this.empty = true;
-                }else{   
-                    this.empty =false;
-                }
+                this.$store.dispatch('emptyCart');
             }
         },
         computed:{
             calcTot(){
                 return this.$store.state.total;
             },
+            
         },   
     }
 </script>
