@@ -12,7 +12,6 @@ npm install vuex --save
 npm install vue-router
 ```
 
-
 ### Compiles and hot-reloads for development and run project
 ```
 npm run serve
