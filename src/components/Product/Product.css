@@ -14,22 +14,16 @@ hr{
     border: .5px solid #dadada;
     background-color: #dadada;
 }
-.shopping hr{
-    
+.shopping hr{  
     margin: 0 6em 0 6em;
 }
 .shopping{
-    
     display: flex;
     padding: 2em 15em 2em 15em; 
-    
-
 }
 
-.shopping img{
-    
+.shopping img{ 
     width: -webkit-fill-available;
-    
 }
 
 .shopping_text{
@@ -40,12 +34,10 @@ hr{
 }
 .shopping_text p{
     font-size: 2em;
-    padding: .5em 0 .5em 0;
-    
+    padding: .5em 0 .5em 0;   
 }
 .shopping_text span{
     opacity: 0.5;
-
 }
 .shopping_text span:last-child{
     padding: .5em 0 .5em 0;
@@ -55,8 +47,7 @@ hr{
     width: max-content;
     margin: 0 auto;
     height: 5em;
-    align-items: center;
-    
+    align-items: center;  
 }
 .shopping_control p {
     background-color: #1d1d20;
@@ -64,42 +55,34 @@ hr{
     padding: 1em;
     margin: auto 0;
     text-transform: uppercase;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
 .shopping_quantity{
     display: flex;
     margin-right: 1em;
-    height:max-content;
-    
-    
+    height:max-content;  
 }
 .shopping_quantity .btn_group{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between;   
 }
 .shopping_quantity .btn_group button:first-child{
     margin-bottom: .2em;
 }
-.shopping_quantity .btn_group button{
-    
+.shopping_quantity .btn_group button{    
     width: 1.9em;
     height: 1.9em;
     border: none;
     background-color: #dadada;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 .shopping_quantity input{
     width: 4em;
     height: 4em;
     background-color: #eeeeee;
     border: none;
-    margin-right: .2em;
-    
+    margin-right: .2em;   
 }
 .shopping_control .add {
     border: none;

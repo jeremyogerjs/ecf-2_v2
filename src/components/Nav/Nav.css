@@ -19,7 +19,6 @@ nav a{
 nav li {
     padding:0 2em 0 0;
 }
-
 nav ul {
     display: flex;
     list-style: none;
@@ -46,7 +45,6 @@ nav p:last-child{
     background-color: transparent;
     
 }
-
 #menu-mobile span{
     width: 100%;
     height: 3px;
@@ -58,7 +56,6 @@ nav p:last-child{
     transition: background-color 0.5s ease-in-out;
     border-radius: 5px;
 }
-
 #menu-mobile span::before,#menu-mobile span::after{
     content: "";
     position: absolute;
@@ -68,11 +65,9 @@ nav p:last-child{
     transition: transform 0.5s ease-in-out;
     border-radius: 5px;
 }
-
 #menu-mobile span::before{
     transform: translateY(-7px);
 }
-
 #menu-mobile span::after{
     transform: translateY(7px);
 }
@@ -81,11 +76,9 @@ nav p:last-child{
 #menu-mobile.active span{
     background-color: transparent;
 }
-
 #menu-mobile.active span::after{
     transform: translateY(0) rotateZ(45deg);
 }
-
 #menu-mobile.active span::before{
     transform: translateY(0) rotateZ(-45deg);
 }
@@ -102,7 +95,6 @@ nav p:last-child{
     padding: 1em;
     z-index: 20;
     pointer-events: none;
-
 }
 .cart_popup #empty{
     opacity: 0.5;
@@ -117,7 +109,6 @@ nav p:last-child{
 .cart_popup span img{
     font-size: .1em;
 }
-
 .cart_popup img{
     width: 5em;
     height: 5.5em;
@@ -130,16 +121,13 @@ nav p:last-child{
 .cart_popup article{
     display: flex;
     padding: 0 0 1.5em 0;
-    position: relative;
-    
+    position: relative;   
 }
-
 .cart_popup hr{
     margin: 1em 0;
     border: .5px solid #dadada;
     background-color: #dadada;
 }    
-
 .cart_total{
     display: flex;
     justify-content: space-between;
@@ -154,21 +142,17 @@ nav p:last-child{
 }
 .cart_validation button a{ 
     text-decoration: none;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
 .cart_validation button{
     cursor: pointer;
     background-color:#1d1d20;
     border: 1px solid #1d1d20;
-    padding: 1em 3em 1em 3em;
-   
+    padding: 1em 3em 1em 3em; 
 }
 .cart_validation button:first-child{   
     background-color: #fff;
-   
 }
-
 .cart_validation button:first-child a{
     color: #1d1d20;
 }
@@ -179,7 +163,6 @@ nav p:last-child{
     opacity: 1;
     pointer-events: all;
 }
-
 @media screen and (max-width:450px){
 
     #menu-mobile{

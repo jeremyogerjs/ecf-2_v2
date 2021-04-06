@@ -29,7 +29,6 @@ span{
     top: 30px;
     width: 35px;
 }
-
 .shopping__cart{
     background-color: white;
     width: max-content;
@@ -39,16 +38,13 @@ span{
 .shopping__cart article{
     border-bottom: 2px solid #dadada;
     position: relative;
-    
 }
 .category{
     display: flex;
     justify-content: space-between;
     padding: 0 0 1em 0;
     align-items: baseline;
-    
 }
-
 .category__other span:nth-child(2){
     padding: 0 4em;
     
@@ -85,24 +81,19 @@ span{
     padding: 1em;
     margin: auto 0;
     text-transform: uppercase;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
-
 /*--------------------------------Content product---------------------------------------------*/
 .shopping_quantity{
     display: flex;
     align-items: center;
-    height:max-content;   
-    
+    height:max-content;      
 }
 .shopping_quantity .btn_group{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:100%;
-    
-    
+    height:100%;   
 }
 .shopping_quantity .btn_group button:first-child{
     margin-bottom: .3em;
@@ -123,23 +114,16 @@ span{
     margin-right: .2em;
     
 }
-
 .product__price{
     padding: 0 0 0 2em;
 }
-
-
-
-
 .shopping__control--mobile,.product__price--mobile{
     display: flex;
     
 }
-
 .product__price--mobile{
     margin-right:95px;
 }
-
 /*------------------------------------------Resume price cart-------------------------------------*/
 .shopping__resume--position{
     display: flex;
@@ -153,7 +137,6 @@ span{
 .shopping__total,.shopping__subtotal{
     display: flex;
 }
-
 .shopping__total span:first-child,.shopping__subtotal span:first-child{
     padding: 0 20em 0 0;
     
@@ -161,7 +144,6 @@ span{
 .shopping__subtotal{
     padding: 1em 0 1em 0;
 }
-
 /*-----------------------------Button checkout and continue shopping------------------------*/
 .shopping__checkout{
     display: flex;
@@ -184,9 +166,7 @@ span{
     padding: 1.5em;
     cursor: pointer;
 }
-
 /*----------------------------------Responsive---------------------------------*/
-
 @media screen and (max-width:450px){
 
     hr:first-of-type{
@@ -226,8 +206,7 @@ span{
         padding: 0 0 0 1em;
         top: unset;
         bottom: 55px;
-    }
-    
+    } 
 /*------------------------------------------Resume price cart-------------------------------------*/
     .shopping__resume--position{
         justify-content: center;
@@ -242,7 +221,6 @@ span{
     .shopping__total span:first-child, .shopping__subtotal span:first-child{
         padding: 0 0 0 0;
     }
-
     /*-----------------------------Button checkout and continue shopping------------------------*/
     .shopping__checkout{
         flex-direction: column;
