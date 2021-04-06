@@ -62,7 +62,6 @@
                 <button>checkout {{ "$"+ calcTot + ".00" }}</button>
             </div>
         </div>
-
     </div>
 </template>
 <script>
@@ -74,7 +73,6 @@
         data(){
             return{
                productCart:this.$store.state.myCart,
-
             }
         },
         computed:{
@@ -84,7 +82,6 @@
         },
         methods:{
             removeCart(e){
-               
                 this.$store.commit('removetoCart',e);
             },
             addQty(e){
@@ -92,21 +89,18 @@
                 this.$store.commit ('calcAddTot',this.productCart[e.target.id]);
             },
             subQty(e){
-                
-                let id = Number(e.target.id)
+                let id = Number(e.target.id);
+
                 if(this.$store.state.myCart[id].quantity == 0){
+
                     this.$store.state.myCart[id].quantity ==0;
                     this.$store.commit ('calcSubTot',this.productCart[e.target.id]);
                 }else{
-
                     this.$store.commit('subQuantity',e);
                     this.$store.commit ('calcSubTot',this.productCart[e.target.id]);
                 }
             }
         },
-       
-        
-
     }
 </script>
 

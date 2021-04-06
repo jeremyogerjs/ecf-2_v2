@@ -61,10 +61,8 @@ import Store from '../../store/store';
                 else{
                     this.$store.state.myCart.push(this.allProduct[id]);
                     this.allProduct[id].quantity = this.quantity; //add new properties for each element add in cart
-                    this.$store.state.total += this.allProduct[id].price * this.quantity;
-                                         
+                    this.$store.state.total += this.allProduct[id].price * this.quantity;                        
                 }
-                
             },
              addQty(){
                 this.quantity++;
@@ -76,12 +74,9 @@ import Store from '../../store/store';
                 }else{
                     this.quantity--;
                 }   
-            }
-             
+            },
         }
     }
-
-
 </script>
 
 
