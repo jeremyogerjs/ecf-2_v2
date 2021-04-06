@@ -6,6 +6,7 @@ export default new Vuex.Store({
     state:{
         myCart:[],
         total:0,
+        empty:false,
     },
     mutations:{
         removetoCart(state,e){

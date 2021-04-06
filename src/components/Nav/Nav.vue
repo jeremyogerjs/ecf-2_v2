@@ -66,7 +66,7 @@ import Store from '../../store/store'
             return{
                 active:false,
                 show:false,
-                empty:false,                               //Conditional render doesn't working.
+                empty:this.$store.state.empty,                               //Conditional render doesn't working.
                 cartPopup:this.$store.state.myCart,
                 message:'Your cart is empty !',
             }
@@ -85,14 +85,14 @@ import Store from '../../store/store'
                 this.$store.commit('removetoCart',e);
                 this.emptyCart();
             },
-             emptyCart(){
-                    if(this.$store.state.myCart.length ==0){
-                        this.empty = true;
-                    }else{   
-                        this.empty =false;
-                    }
+            emptyCart(){
+                if(this.$store.state.myCart.length ==0){
+                    this.empty = true;
+                }else{   
+                    this.empty =false;
                 }
-            },
+            }
+        },
         computed:{
             calcTot(){
                 return this.$store.state.total;

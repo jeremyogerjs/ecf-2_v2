@@ -11,17 +11,11 @@ import Header from './components/Nav/Nav';
 
 export default {
   name: 'App',
-  data(){
-    return{
-
-    }
-  },
   components:{
     "Headertop":Header,
   }
 }
 </script>
-
 <style>
   body{
   box-sizing: border-box;
