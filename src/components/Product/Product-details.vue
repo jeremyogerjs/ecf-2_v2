@@ -7,8 +7,8 @@
         <div class="shopping">
 
             <img :src="require('../../assets/Media/'+`${allProduct[this.Id-1].image}`)" :alt="allProduct[this.Id-1].title">
-            <div class="shopping_content">
-                <div class="shopping_text">
+            <div class="shopping__content">
+                <div class="shopping__text">
                     
                     <span>{{ allProduct[this.Id-1].brand }}</span>
                     <p>{{ allProduct[this.Id-1].title }}</p>
@@ -16,10 +16,10 @@
                     <span> {{ allProduct[this.Id-1].description }}</span>
                 </div>
                 <hr>
-                <div class="shopping_control">
-                    <div class="shopping_quantity">
+                <div class="shopping__control">
+                    <div class="shopping__quantity">
                         <input type="text" v-model="quantity" value="quantity">
-                        <div class="btn_group">
+                        <div class="btn__group">
 
                             <button :id="this.Id-1" @click="addQty">+</button>
                             <button :id="this.Id-1" @click="subQty">-</button>   

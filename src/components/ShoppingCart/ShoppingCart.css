@@ -70,12 +70,12 @@ span{
     text-transform: uppercase;
     font-weight: 500;
 }
-.shopping_control{
+.shopping__control{
     display: flex;
     width: max-content;
     margin-right: 20px;  
 }
-.shopping_control p {
+.shopping__control p {
     background-color: #1d1d20;
     color: #fff;
     padding: 1em;
@@ -84,21 +84,21 @@ span{
     cursor: pointer;   
 }
 /*--------------------------------Content product---------------------------------------------*/
-.shopping_quantity{
+.shopping__quantity{
     display: flex;
     align-items: center;
     height:max-content;      
 }
-.shopping_quantity .btn_group{
+.shopping__quantity .btn__group{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height:100%;   
 }
-.shopping_quantity .btn_group button:first-child{
+.shopping__quantity .btn__group button:first-child{
     margin-bottom: .3em;
 }
-.shopping_quantity .btn_group button{
+.shopping__quantity .btn__group button{
     
     width: 1.5em;
     margin: auto;
@@ -106,7 +106,7 @@ span{
     background-color: #dadada;
     cursor: pointer;
 }
-.shopping_quantity input{
+.shopping__quantity input{
     width: 3em;
     height: 3em;
     background-color: #eeeeee;
@@ -118,8 +118,7 @@ span{
     padding: 0 0 0 2em;
 }
 .shopping__control--mobile,.product__price--mobile{
-    display: flex;
-    
+    display: flex;  
 }
 .product__price--mobile{
     margin-right:95px;

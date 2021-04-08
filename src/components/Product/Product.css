@@ -10,46 +10,40 @@ input[type="text"]{
 .breadcrumb span{
     opacity: 0.5;
 }
-hr{
-    border: .5px solid #dadada;
-    background-color: #dadada;
-}
-.shopping hr{  
-    margin: 0 6em 0 6em;
-}
 .shopping{
     display: flex;
     padding: 2em 15em 2em 15em; 
 }
-
+.shopping hr{  
+    margin: 0 6em 0 6em;
+}
 .shopping img{ 
     width: -webkit-fill-available;
 }
-
-.shopping_text{
+.shopping__text{
     text-align: center;
     display: flex;
     flex-direction: column;
     padding: 0 6em 1em 6em;
 }
-.shopping_text p{
+.shopping__text p{
     font-size: 2em;
     padding: .5em 0 .5em 0;   
 }
-.shopping_text span{
+.shopping__text span{
     opacity: 0.5;
 }
-.shopping_text span:last-child{
+.shopping__text span:last-child{
     padding: .5em 0 .5em 0;
 }
-.shopping_control{
+.shopping__control{
     display: flex;
     width: max-content;
     margin: 0 auto;
     height: 5em;
     align-items: center;  
 }
-.shopping_control p {
+.shopping__control p {
     background-color: #1d1d20;
     color: #fff;
     padding: 1em;
@@ -57,34 +51,34 @@ hr{
     text-transform: uppercase;
     cursor: pointer;   
 }
-.shopping_quantity{
+.shopping__quantity{
     display: flex;
     margin-right: 1em;
     height:max-content;  
 }
-.shopping_quantity .btn_group{
+.shopping__quantity .btn__group{
     display: flex;
     flex-direction: column;
     justify-content: space-between;   
 }
-.shopping_quantity .btn_group button:first-child{
+.shopping__quantity .btn__group button:first-child{
     margin-bottom: .2em;
 }
-.shopping_quantity .btn_group button{    
+.shopping__quantity .btn__group button{    
     width: 1.9em;
     height: 1.9em;
     border: none;
     background-color: #dadada;
     cursor: pointer;  
 }
-.shopping_quantity input{
+.shopping__quantity input{
     width: 4em;
     height: 4em;
     background-color: #eeeeee;
     border: none;
     margin-right: .2em;   
 }
-.shopping_control .add {
+.shopping__control .add {
     border: none;
     padding: 1.4em 2em;
     cursor: pointer;

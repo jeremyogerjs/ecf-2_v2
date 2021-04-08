@@ -23,10 +23,10 @@
                             </div>
                         </div>
                         <div class="shopping__control--mobile">
-                            <div class="shopping_control">
-                                <div class="shopping_quantity">
+                            <div class="shopping__control">
+                                <div class="shopping__quantity">
                                     <input type="text" :id="index" :value=" product.quantity ">
-                                    <div class="btn_group">
+                                    <div class="btn__group">
                                         <button :id="index" @click="addQty">+</button>
                                         <button :id="index" @click="subQty">-</button>   
                                     </div>

@@ -34,7 +34,7 @@ nav p:last-child{
     display: none;
 }
 /*-----------------------------Menu-mobile-----------------------------------------------*/
-#menu-mobile{
+#menu--mobile{
     height: 40px;
     width: 20px;
     cursor: pointer;
@@ -42,10 +42,9 @@ nav p:last-child{
     position: relative;
     display: none;
     margin-left: 10px;
-    background-color: transparent;
-    
+    background-color: transparent;   
 }
-#menu-mobile span{
+#menu--mobile span{
     width: 100%;
     height: 3px;
     display: block;
@@ -56,7 +55,7 @@ nav p:last-child{
     transition: background-color 0.5s ease-in-out;
     border-radius: 5px;
 }
-#menu-mobile span::before,#menu-mobile span::after{
+#menu--mobile span::before,#menu--mobile span::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -65,25 +64,25 @@ nav p:last-child{
     transition: transform 0.5s ease-in-out;
     border-radius: 5px;
 }
-#menu-mobile span::before{
+#menu--mobile span::before{
     transform: translateY(-7px);
 }
-#menu-mobile span::after{
+#menu--mobile span::after{
     transform: translateY(7px);
 }
 
 /*-----------------------------Animation burger---------------------------*/
-#menu-mobile.active span{
+#menu--mobile.active span{
     background-color: transparent;
 }
-#menu-mobile.active span::after{
+#menu--mobile.active span::after{
     transform: translateY(0) rotateZ(45deg);
 }
-#menu-mobile.active span::before{
+#menu--mobile.active span::before{
     transform: translateY(0) rotateZ(-45deg);
 }
 /*-------------------------CART POPUP----------------------------------------*/
-.cart_popup{
+.cart__popup{
     position: absolute;
     background-color: #fff;
     right: 0;  
@@ -96,67 +95,67 @@ nav p:last-child{
     z-index: 20;
     pointer-events: none;
 }
-.cart_popup #empty{
+.cart__popup #empty{
     opacity: 0.5;
     font-size: .7em;
     width: max-content;
     margin: 0 auto;
 }
-.cart_popup article span{
+.cart__popup article span{
     opacity: 0.5;
     font-size: .7em;
 }
-.cart_popup span img{
+.cart__popup span img{
     font-size: .1em;
 }
-.cart_popup img{
+.cart__popup img{
     width: 5em;
     height: 5.5em;
     padding: 0 1em 0 0;
     object-fit: cover;
 }
-.cart_popup p {
+.cart__popup p {
     font-weight: 500;
 }
-.cart_popup article{
+.cart__popup article{
     display: flex;
     padding: 0 0 1.5em 0;
     position: relative;   
 }
-.cart_popup hr{
+.cart__popup hr{
     margin: 1em 0;
     border: .5px solid #dadada;
     background-color: #dadada;
 }    
-.cart_total{
+.cart__total{
     display: flex;
     justify-content: space-between;
     opacity: 0.5;
 }
-.cart_validation{
+.cart__validation{
     
     padding: 1em 0 0 0;
     font-size: 1em;
     display: flex;
     justify-content: space-between;
 }
-.cart_validation button a{ 
+.cart__validation button a{ 
     text-decoration: none;
     font-weight: 700;   
 }
-.cart_validation button{
+.cart__validation button{
     cursor: pointer;
     background-color:#1d1d20;
     border: 1px solid #1d1d20;
-    padding: 1em 3em 1em 3em; 
+    padding: 1em 3em;  
 }
-.cart_validation button:first-child{   
+.cart__validation button:first-child{   
     background-color: #fff;
 }
-.cart_validation button:first-child a{
+.cart__validation button:first-child a{
     color: #1d1d20;
 }
-.cart_validation button:last-child a{
+.cart__validation button:last-child a{
     color: #fff;
 }
 .isActive{
@@ -165,7 +164,7 @@ nav p:last-child{
 }
 @media screen and (max-width:450px){
 
-    #menu-mobile{
+    #menu--mobile{
         display: initial;
     }
     nav ul{

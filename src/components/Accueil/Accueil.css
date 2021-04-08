@@ -41,7 +41,7 @@
     padding: .5em 0 0 0;
     font-weight: 500;
 }
-.product article .--overlay{
+.product article .product--overlay{
     text-align: center;
     position: absolute;
     width: 9em;
@@ -56,17 +56,17 @@
     cursor: pointer;
     text-decoration: none;
 }
-.product article:hover .--overlay{
+.product article:hover .product--overlay{
     opacity: 1;
     
 }
-.product article .--overlay:hover{
+.product article .product--overlay:hover{
     transform: scale(1.5);
 }
 .product article:hover img {
     opacity: 0.5;
 }
-.product article .--overlay:nth-child(2){
+.product article .product--overlay:nth-child(2){
     margin: 9.2em 0 6em 5em;
     background-color: #4a4a4d;
 }
@@ -126,14 +126,14 @@
         width: unset;
         height: 7em;
     }
-    .product article .--overlay{
+    .product--overlay{
         font-size: .7em;
         margin: 2em 0 4em 1.5em;
     }
-    .product article .--overlay:nth-child(2){
+     .product--overlay:nth-child(2){
         margin: 6.2em 0 0 1.5em;
     }
-    .product article .--overlay:hover{
+    .product--overlay:hover{
         transform: none;
     }
     .product article p{

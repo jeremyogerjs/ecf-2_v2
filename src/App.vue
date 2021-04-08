@@ -30,6 +30,10 @@ p,h2{
   margin-block-end: 0;
 
 }
+hr{
+  border: .5px solid #dadada;
+  background-color: #dadada;
+}
 h2{
   font-size: 2em;
 }

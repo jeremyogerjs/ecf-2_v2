@@ -13,8 +13,8 @@
 
         <section class="product">
             <article :key="index" v-for="(product,index) in allProduct">
-                <router-link class="--overlay" :to="`/Product/${index + 1}`"><span > View details</span></router-link>
-                <span :id="index" @click="addToCart" class="--overlay"> add to cart </span>
+                <router-link class="product--overlay" :to="`/Product/${index + 1}`"><span > View details</span></router-link>
+                <span :id="index" @click="addToCart" class="product--overlay"> add to cart </span>
                 <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <span>{{ product.brand }}</span>
                 <p>{{ product.title }}</p>

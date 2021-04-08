@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav>
-            <div @click="showMenu" id="menu-mobile" :class="{active:show}" >
+            <div @click="showMenu" id="menu--mobile" :class="{active:show}" >
                 <span ></span>
             </div>
             <div>
@@ -25,7 +25,7 @@
                 
         </nav>
 
-        <section class="cart_popup" :class="{isActive:active}" >
+        <section class="cart__popup" :class="{isActive:active}" >
             <article :key="index" v-for="(product,index) in cartPopup">
                 
                 <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
@@ -43,12 +43,12 @@
             </article>
             <span v-if="this.$store.state.empty" id="empty"> {{ this.message }} </span>
             <hr>
-                <div class="cart_total">
+                <div class="cart__total">
                     <span >TOTAL </span>
                     <span> {{"$" + calcTot + ".00" }} </span>
                 </div>
                 
-                <div class="cart_validation">
+                <div class="cart__validation">
                     
                     <button><router-link to="/">VIEW CART</router-link> </button>
                     <button @click="showPopup" ><router-link to="/ShoppingCart">CHECKOUT</router-link></button>
@@ -76,8 +76,7 @@ import Store from '../../store/store'
                 this.emptyCart();
                 console.log(this.empty);
             },
-            showMenu(){
-                
+            showMenu(){ 
                 this.show = !this.show;
             },
             removeCart(e){
