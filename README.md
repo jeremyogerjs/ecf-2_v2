@@ -4,7 +4,7 @@ Ce projet est un projet de cours aka ECF pour la formation continue dev/webMobil
 J'ai réalisé ce projet en HTML,CSS et vueJS.
 
 Chaque composant a son fichier css.
-Le fichier App.vue intègre le css sur certain éléments commun du projet.
+Le fichier App.vue intègre le css commun a tout les components du projet.
 ## Project setup vue2.x.x  
 ```
 npm install
