@@ -10,7 +10,7 @@
   margin: 0 auto;
   background-color: #393935;
   padding: 7em 2em 7em 2em;
-  width: 50%;
+  width: 40%;
   border-left: 0.5em solid white;
   border-right: 0.5em solid white;
   text-align: center;
@@ -61,12 +61,15 @@
   transition: opacity 0.35s ease-in-out;
   cursor: pointer;
   text-decoration: none;
+  pointer-events:visibleFill;
 }
-.product article:hover .product--overlay {
+.product article:hover .product--overlay  {
   opacity: 1;
+  
 }
 .product article .product--overlay:hover {
   transform: scale(1.5);
+ 
 }
 .product article .product--overlay:nth-child(2) {
   margin: 9.2em 0 6em 5em;
@@ -85,7 +88,7 @@
   font-weight: 500;
 }
 /*------------------------------Responsive------------------------------------------*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 451px) {
   .jumpbotron {
     height: 50%;
     background-size: 120%;
@@ -119,14 +122,15 @@
     width: unset;
     height: 7em;
   }
-  .product--overlay {
+  .product article .product--overlay {
     font-size: 0.7em;
     margin: 2em 0 4em 1.5em;
+    
   }
-  .product--overlay:nth-child(2) {
+  .product article .product--overlay:nth-child(2) {
     margin: 6.2em 0 0 1.5em;
   }
-  .product--overlay:hover {
+  .product article .product--overlay:hover {
     transform: none;
   }
   .product article p {

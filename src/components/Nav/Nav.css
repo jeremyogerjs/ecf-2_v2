@@ -87,7 +87,7 @@ nav p:last-child {
   position: absolute;
   background-color: #fff;
   right: 0;
-  width: 19em;
+  width: 20em;
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   text-transform: uppercase;
@@ -116,11 +116,12 @@ nav p:last-child {
   object-fit: cover;
 }
 .cart__popup p {
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 14px;
 }
 .cart__popup article {
   display: flex;
-  padding: 0 0 1.5em 0;
+  padding: 0 3em 1.5em 0;
   position: relative;
 }
 .cart__popup hr {
@@ -161,7 +162,7 @@ nav p:last-child {
   opacity: 1;
   pointer-events: all;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 451px) {
   #menu--mobile {
     display: initial;
   }
@@ -187,7 +188,15 @@ nav p:last-child {
     display: flex;
     padding-right: 25px;
   }
+
   .exit {
     right: 0;
   }
+  .cart__popup p {
+    font-size: 10px;
+  }
+  .cart__validation button{
+    padding:1em 1.5em
+  }
+
 }

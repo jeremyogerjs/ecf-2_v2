@@ -17,7 +17,7 @@
             </ul>
             <div @click="showPopup" id="nav__cart--mobile">
                 <img src="../../assets/Icones/shopping-bag-solid.svg" alt="icone cadenat">
-                (2)
+                {{ "(" + cartPopup.length +")" }}
             </div>
             <p @click="showPopup">my cart {{ "(" + cartPopup.length +")" }} 
                 <span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span>
@@ -27,14 +27,13 @@
             <article :key="index" v-for="(product,index) in cartPopup">               
                 <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <div>
-                    <div class="exit">
-                        <span @click="removeCart" :id="index" ></span>
-                    </div>
-                    <p> {{ product.title }} </p>
-                    <p> <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span> {{ product.quantity }} </p>
+                    <p> {{ product.title }} <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span>{{ product.quantity }} </p>
                     <span> {{ product.brand }} </span>
                     <p> {{ "$" + product.price + ".00" }} </p>
                 </div>
+                    <div class="exit">
+                        <span @click="removeCart" :id="index" ></span>
+                    </div>
             </article>
             <span v-if="this.$store.state.empty" id="empty"> {{ this.message }} </span>
             <hr>

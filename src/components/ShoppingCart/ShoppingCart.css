@@ -149,7 +149,7 @@ span {
 .shopping__checkout a {
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 1px solid #1d1d20;
+  border-bottom: 2px solid #1d1d20;
   height: max-content;
   color: #1d1d20;
 }
@@ -162,7 +162,7 @@ span {
   cursor: pointer;
 }
 /*----------------------------------Responsive---------------------------------*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 451px) {
   hr:first-of-type {
     display: none;
   }
@@ -194,12 +194,20 @@ span {
     align-items: center;
   }
   .product__price--mobile {
-    align-items: center;
+    margin-right: 35px;
+    
+    
+  }
+  .product__price{
+    font-size: 20px;
   }
   .exit {
     padding: 0 0 0 1em;
     top: unset;
-    bottom: 55px;
+    bottom: 60px;
+  }
+  .exit span{
+    width: 25px;
   }
   /*------------------------------------------Resume price cart-------------------------------------*/
   .shopping__resume--position {
@@ -219,11 +227,11 @@ span {
   /*-----------------------------Button checkout and continue shopping------------------------*/
   .shopping__checkout {
     flex-direction: column;
-
     text-align: center;
   }
   .shopping__checkout a {
     margin: 0 0 1em 0;
+    font-weight: 500;
   }
   .shopping__checkout button {
     width: max-content;

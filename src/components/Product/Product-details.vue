@@ -63,6 +63,7 @@ import Store from '../../store/store';
                     this.allProduct[id].quantity = this.quantity; //add new properties for each element add in cart
                     this.$store.state.total += this.allProduct[id].price * this.quantity;                        
                 }
+                this.$store.dispatch("emptyCart");
             },
              addQty(){
                 this.quantity++;

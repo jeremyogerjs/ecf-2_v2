@@ -9,13 +9,14 @@ input[type="text"]{
 }
 .breadcrumb span{
     opacity: 0.5;
+    font-weight: 500;
 }
 .shopping{
     display: flex;
-    padding: 2em 15em 2em 15em; 
+    padding: 2em 15em; 
 }
 .shopping hr{  
-    margin: 0 6em 0 6em;
+    margin: 0 4em;
 }
 .shopping img{ 
     width: -webkit-fill-available;
@@ -24,7 +25,7 @@ input[type="text"]{
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 0 6em 1em 6em;
+    padding: 0 2.5em 1em 2.5em;
 }
 .shopping__text p{
     font-size: 2em;
@@ -32,15 +33,16 @@ input[type="text"]{
 }
 .shopping__text span{
     opacity: 0.5;
+    font-weight: 500;
 }
 .shopping__text span:last-child{
-    padding: .5em 0 .5em 0;
+    padding:.5em 0 ;
 }
 .shopping__control{
     display: flex;
     width: max-content;
     margin: 0 auto;
-    height: 5em;
+    height: 6em;
     align-items: center;  
 }
 .shopping__control p {
@@ -86,19 +88,22 @@ input[type="text"]{
     background-color: #1d1d20;
     text-transform: uppercase;
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:451px){
    
     .shopping{
         flex-direction: column;
         padding: 0;
     }
+    .shopping hr{
+        margin: 0;
+    }
     .shopping img{
         padding: 2em 0;
     }
-    .shopping_text{
-        padding: 2em 0 1em 0;
+    .shopping__text{
+        padding: 2em .5em 1em .5em;
     }
-    .shopping_text p {
+    .shopping__text p {
         font-size: 1.5em;
         font-weight: 700;
     }

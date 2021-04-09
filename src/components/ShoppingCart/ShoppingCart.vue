@@ -61,7 +61,7 @@
       <hr />
       <div class="shopping__checkout">
         <router-link to="/">Continue shopping</router-link>
-        <button>checkout {{ "$" + calcTot + ".00" }}</button>
+        <button>checkout {{ "($" + calcTot + ".00)" }}</button>
       </div>
     </div>
   </div>
