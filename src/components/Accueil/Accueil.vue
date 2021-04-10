@@ -4,10 +4,8 @@
       <div class="jumpbotron__content">
         <h2>Plates</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
-          nobis iusto error deserunt eos est aliquid harum at assumenda quod
-          nostrum nisi cupiditate labore sit in iure voluptatibus impedit,
-          dignissimos hic commodi?
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, 
+          interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl sit.
         </p>
       </div>
     </section>

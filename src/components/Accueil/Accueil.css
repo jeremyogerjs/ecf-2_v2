@@ -9,8 +9,8 @@
 .jumpbotron__content {
   margin: 0 auto;
   background-color: #393935;
-  padding: 7em 2em 7em 2em;
-  width: 40%;
+  padding: 7em 2em;
+  width: 50%;
   border-left: 0.5em solid white;
   border-right: 0.5em solid white;
   text-align: center;
@@ -37,6 +37,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  
 }
 .product article img {
   width: 20em;
@@ -62,6 +63,10 @@
   cursor: pointer;
   text-decoration: none;
   pointer-events:visibleFill;
+  
+}
+.product article .product--overlay span{
+  font-weight: 400 !important;
 }
 .product article:hover .product--overlay  {
   opacity: 1;
@@ -74,13 +79,21 @@
 .product article .product--overlay:nth-child(2) {
   margin: 9.2em 0 6em 5em;
   background-color: #4a4a4d;
+  font-weight: 400 ;
 }
 .product article span {
   opacity: 0.5;
-  padding: 0.5em 0 0 0;
+  padding: 1.5em 0 0 0;
+  font-weight: 500;
+}
+.product article > span:last-of-type{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  padding: .5em 0 0 0;
 }
 .product article span:first-child {
   opacity: 1;
+  
 }
 .product article p {
   text-transform: uppercase;
@@ -88,9 +101,40 @@
   font-weight: 500;
 }
 /*------------------------------Responsive------------------------------------------*/
+
+@media screen and (max-width:1071px){
+  .product {
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    row-gap: 1em;
+    margin: 2.5em 0;
+    width:unset;
+  }
+  .product article {
+    width: 90%;
+    justify-self: center;
+  }
+  .product article img {
+    width: unset;
+    height: 8em;
+  }
+  .product article .product--overlay {
+    font-size: 0.7em;
+    margin: 3em 0 0 2.2em;
+  }
+  .product article .product--overlay:nth-child(2) {
+    margin: 7.2em 0 0 2.2em;
+  }
+  .product article .product--overlay:hover {
+    transform: none;
+  }
+  .product article p {
+    font-size: 13px;
+  }
+}
 @media screen and (max-width: 451px) {
   .jumpbotron {
-    height: 50%;
+
     background-size: 120%;
   }
   .jumpbotron__content {
@@ -103,37 +147,11 @@
   }
   .jumpbotron__content p {
     font-size: 10px;
-    margin-top: 0;
+    margin-top: .2em;
   }
   .jumpbotron__content h2 {
     border-bottom: none;
     padding-bottom: 0;
     font-size: 1em;
-  }
-  .product {
-    grid-template-columns: 150px 150px;
-    gap: 2em;
-    margin: 2.5em auto;
-  }
-  .product article {
-    width: unset;
-  }
-  .product article img {
-    width: unset;
-    height: 7em;
-  }
-  .product article .product--overlay {
-    font-size: 0.7em;
-    margin: 2em 0 4em 1.5em;
-    
-  }
-  .product article .product--overlay:nth-child(2) {
-    margin: 6.2em 0 0 1.5em;
-  }
-  .product article .product--overlay:hover {
-    transform: none;
-  }
-  .product article p {
-    font-size: 13px;
-  }
+  } 
 }

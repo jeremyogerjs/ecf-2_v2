@@ -17,23 +17,23 @@
             </ul>
             <div @click="showPopup" id="nav__cart--mobile">
                 <img src="../../assets/Icones/shopping-bag-solid.svg" alt="icone cadenat">
-                {{ "(" + cartPopup.length +")" }}
+                 {{ " (" + cartPopup.length +")" }}
             </div>
             <p @click="showPopup">my cart {{ "(" + cartPopup.length +")" }} 
-                <span><img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span>
+                <span> <img src="../../assets/Icones/sort-down-solid.svg" alt="icone fleche du bas"></span>
             </p>                
         </nav>
         <section class="cart__popup" :class="{isActive:active}" >
             <article :key="index" v-for="(product,index) in cartPopup">               
                 <img :src="require('../../assets/Media/'+`${product.image}`)" :alt="product.title">
                 <div>
-                    <p> {{ product.title }} <span><img src="../../assets/Icones/times-solid.svg" alt="croix"></span>{{ product.quantity }} </p>
-                    <span> {{ product.brand }} </span>
-                    <p> {{ "$" + product.price + ".00" }} </p>
-                </div>
+                    <p>{{ product.title }} <span><img src="../../assets/Icones/times-solid.svg" alt="croix"> {{ product.quantity }}</span>  </p>
                     <div class="exit">
                         <span @click="removeCart" :id="index" ></span>
                     </div>
+                    <span> {{ product.brand }} </span>
+                    <p> {{ "&#36;" + product.price + ".00" }} </p>
+                </div>
             </article>
             <span v-if="this.$store.state.empty" id="empty"> {{ this.message }} </span>
             <hr>

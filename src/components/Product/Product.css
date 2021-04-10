@@ -1,11 +1,11 @@
 input[type="text"]{
     padding: 0 0;
 }
-
 .breadcrumb{
     width: max-content;
     margin: 0 auto;
     padding: 1em 0 1em 0;
+    text-transform: uppercase;
 }
 .breadcrumb span{
     opacity: 0.5;
@@ -13,7 +13,7 @@ input[type="text"]{
 }
 .shopping{
     display: flex;
-    padding: 2em 15em; 
+    padding: 2em 10em; 
 }
 .shopping hr{  
     margin: 0 4em;
@@ -21,22 +21,32 @@ input[type="text"]{
 .shopping img{ 
     width: -webkit-fill-available;
 }
+.shopping__content{
+    width: 70%;
+}
 .shopping__text{
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 0 2.5em 1em 2.5em;
+    padding: 0 4em 1em 4em;
 }
 .shopping__text p{
-    font-size: 2em;
-    padding: .5em 0 .5em 0;   
+    font-size: 2.7em;
+    padding: .5em 0 .5em 0;
+    font-family: 'Playfair Display', serif;  
+    font-weight: bold;
 }
 .shopping__text span{
     opacity: 0.5;
     font-weight: 500;
 }
+.shopping__text > span:nth-child(3){
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+}
 .shopping__text span:last-child{
-    padding:.5em 0 ;
+    padding: 1em 0 ;
 }
 .shopping__control{
     display: flex;
@@ -74,8 +84,8 @@ input[type="text"]{
     cursor: pointer;  
 }
 .shopping__quantity input{
-    width: 4em;
-    height: 4em;
+    width: 1.2em;
+    padding: 1.2em;
     background-color: #eeeeee;
     border: none;
     margin-right: .2em;   
@@ -87,12 +97,15 @@ input[type="text"]{
     color: #fff;
     background-color: #1d1d20;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 @media screen and (max-width:451px){
-   
+    .breadcrumb p {
+        font-size: small;
+    }
     .shopping{
         flex-direction: column;
-        padding: 0;
+        padding: .5em;
     }
     .shopping hr{
         margin: 0;
@@ -100,11 +113,17 @@ input[type="text"]{
     .shopping img{
         padding: 2em 0;
     }
+    .shopping__content{
+        width: unset;
+    }
     .shopping__text{
         padding: 2em .5em 1em .5em;
     }
     .shopping__text p {
         font-size: 1.5em;
         font-weight: 700;
+    }
+    .shopping__text span:last-child{
+        font-size: x-small;
     }
 }

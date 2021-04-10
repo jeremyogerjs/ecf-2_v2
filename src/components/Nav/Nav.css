@@ -5,10 +5,12 @@ nav {
   height: max-content;
   align-items: center;
   color: black;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 nav span img {
-  width: 0.5em;
+  width: 0.7em;
   padding-left: 0.3em;
 }
 nav a {
@@ -22,6 +24,7 @@ nav li {
 nav ul {
   display: flex;
   list-style: none;
+  align-items: baseline;
 }
 nav ul.active {
   opacity: 1;
@@ -29,10 +32,13 @@ nav ul.active {
 nav p:last-child {
   padding-right: 1em;
   cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 #nav__cart--mobile {
   display: none;
 }
+
 /*-----------------------------Menu-mobile-----------------------------------------------*/
 #menu--mobile {
   height: 40px;
@@ -71,7 +77,6 @@ nav p:last-child {
 #menu--mobile span::after {
   transform: translateY(7px);
 }
-
 /*-----------------------------Animation burger---------------------------*/
 #menu--mobile.active span {
   background-color: transparent;
@@ -86,7 +91,8 @@ nav p:last-child {
 .cart__popup {
   position: absolute;
   background-color: #fff;
-  right: 0;
+  right: 10px;
+  top: 55px;
   width: 20em;
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
@@ -96,15 +102,20 @@ nav p:last-child {
   z-index: 20;
   pointer-events: none;
 }
+.isActive {
+  opacity: 1;
+  pointer-events: all;
+}
 .cart__popup #empty {
   opacity: 0.5;
   font-size: 0.7em;
   width: max-content;
-  margin: 0 auto;
+  padding: 0 100px;
 }
 .cart__popup article span {
   opacity: 0.5;
   font-size: 0.7em;
+  font-weight: bold;
 }
 .cart__popup span img {
   font-size: 0.1em;
@@ -117,14 +128,47 @@ nav p:last-child {
 }
 .cart__popup p {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
+}
+.cart__popup article p:first-child > span{
+  font-size: smaller;
+  opacity: 1;
+  font-weight: 400;
 }
 .cart__popup article {
   display: flex;
-  padding: 0 3em 1.5em 0;
+  padding: 1.5em 2.8em 0 0;
   position: relative;
 }
+.cart__popup article:first-child {
+  display: flex;
+  padding: 0 2.8em 0 0;
+  position: relative;
+}
+/*-------------------------Cross to remove article----------------------------*/
+.cart__popup article:first-child .exit{
+  height: 40px;
+  width: 13px;
+  cursor: pointer;
+  margin: 0 0;
+  position: absolute;
+  right: 0;
+  top: 9px;
+  background-color: transparent;
+}
+.exit{
+  height: 40px;
+  width: 13px;
+  cursor: pointer;
+  margin: 0 0;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  background-color: transparent;
+}
+/*------------------------information about total and button after article------------------------------------*/
 .cart__popup hr {
+  margin-block-start: 0;
   margin: 1em 0;
   border: 0.5px solid #dadada;
   background-color: #dadada;
@@ -133,6 +177,7 @@ nav p:last-child {
   display: flex;
   justify-content: space-between;
   opacity: 0.5;
+  font-size: small;
 }
 .cart__validation {
   padding: 1em 0 0 0;
@@ -149,18 +194,15 @@ nav p:last-child {
   cursor: pointer;
   background-color: #1d1d20;
   border: 1px solid #1d1d20;
-  padding: 1em 3em;
+  padding: 1em 2.8em;
   color: #fff;
   width: max-content;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 .cart__validation a:first-child button{
   background-color: #fff;
   color: #1d1d20;
-}
-
-.isActive {
-  opacity: 1;
-  pointer-events: all;
 }
 @media screen and (max-width: 451px) {
   #menu--mobile {
@@ -176,7 +218,6 @@ nav p:last-child {
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
   }
-
   nav ul li {
     padding: 0.5em 0;
   }
@@ -184,19 +225,54 @@ nav p:last-child {
     display: none;
   }
   #nav__cart--mobile {
-    width: 1em;
+    
     display: flex;
-    padding-right: 25px;
+    padding-right: 5px;
   }
-
+  #nav__cart--mobile img{
+    padding-right: 5px;
+    width: 1em; 
+  }
+  .cart__popup{
+    top: 70px;
+    right: 0;
+    width: 70%;
+    padding: .6em;
+  }
+  .cart__popup img{
+    height: 4em;
+    width: 4em;
+  }
+  .cart__popup article:first-child{
+    padding: 0 2em 0 0;
+  }
+  .cart__popup article{
+    padding: 1em 2em 0 0;
+  }
+  .cart__popup article span{
+    font-size: 0.6em;
+  }
   .exit {
     right: 0;
+    top: 22px;
+  }
+
+  .cart__popup article p:first-child > span{
+    font-size: xx-small;
   }
   .cart__popup p {
     font-size: 10px;
+    line-height: initial;
+  }
+  .cart__popup article:first-child .exit{
+    top: 5px;
   }
   .cart__validation button{
-    padding:1em 1.5em
+    padding:1em 1.5em;
+    font-size: 12px;
   }
 
+  .cart__popup #empty{
+    padding: 0 28%;
+  }
 }

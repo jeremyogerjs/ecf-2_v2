@@ -20,30 +20,34 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Signika", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 300;
 }
 p,
 h2 {
   margin-block-start: 0;
   margin-block-end: 0;
+  font-weight: 400;
 }
 hr {
   border: 0.5px solid #dadada;
   background-color: #dadada;
 }
 h2 {
-  font-size: 2em;
+  font-size: 2.3em;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
 }
 a {
-  font-family: "Signika", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 button {
-  font-family: "Signika", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
-.exit {
+.exit{
   height: 40px;
-  width: 20px;
+  width: 13px;
   cursor: pointer;
   margin: 0 0;
   position: absolute;
@@ -72,9 +76,9 @@ button {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   background-color: #333;
   transition: transform 0.5s ease-in-out;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 </style>
