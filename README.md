@@ -5,6 +5,7 @@ J'ai réalisé ce projet en HTML,CSS et vueJS.
 
 Chaque composant a son fichier css.
 Le fichier App.vue intègre le css commun a tout les components du projet.
+See project live here : https://ecf-2.netlify.app/
 ## Project setup vue2.x.x  
 ```
 npm install
